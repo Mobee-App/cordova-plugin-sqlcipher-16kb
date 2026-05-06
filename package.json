@@ -1,0 +1,18 @@
+{
+  "name": "cordova-plugin-sqlcipher-new",
+  "version": "1.0.0",
+  "description": "SQLCipher Cordova plugin using net.zetetic:sqlcipher-android 4.15.0 with 16KB page size support",
+  "cordova": {
+    "id": "cordova-plugin-sqlcipher-new",
+    "platforms": ["android"]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "sqlcipher",
+    "sqlite",
+    "encryption",
+    "16kb"
+  ],
+  "license": "MIT"
+}

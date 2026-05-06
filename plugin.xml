@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-sqlcipher-new"
+    version="1.0.0">
+
+    <name>SQLCipherNew</name>
+    <description>SQLCipher plugin using net.zetetic:sqlcipher-android with 16KB page size support</description>
+    <license>MIT</license>
+    <keywords>sqlcipher,sqlite,encryption,16kb</keywords>
+
+    <js-module src="www/SQLitePlugin.js" name="SQLitePlugin">
+        <clobbers target="sqlitePlugin" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SQLitePlugin">
+                <param name="android-package" value="io.sqlc.SQLitePlugin"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/io/sqlc/SQLitePlugin.java" target-dir="app/src/main/java/io/sqlc"/>
+        <source-file src="src/android/io/sqlc/SQLiteAndroidDatabase.java" target-dir="app/src/main/java/io/sqlc"/>
+        <source-file src="src/android/io/sqlc/SQLiteConnectorDatabase.java" target-dir="app/src/main/java/io/sqlc"/>
+        <source-file src="src/android/io/sqlc/CBLock.java" target-dir="app/src/main/java/io/sqlc"/>
+
+        <framework src="src/android/sqlcipher-new.gradle" custom="true" type="gradleReference"/>
+    </platform>
+
+</plugin>
