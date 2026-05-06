@@ -16,7 +16,7 @@ The old `cordova-sqlcipher-adapter` uses the deprecated `android-database-sqlcip
 ## Installation
 
 ```bash
-cordova plugin add https://github.com/YOUR_USERNAME/cordova-plugin-sqlcipher-16kb
+cordova plugin add https://github.com/Mobee-App/cordova-plugin-sqlcipher-16kb.git
 ```
 
 ## Usage
